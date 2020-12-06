@@ -45,19 +45,21 @@ exports.onPreInit = async ({ store }) => {
   let typeString = ``
   const pascalNames = []
 
-  for (const pluginInfo of [...flattenedPlugins, ...pluginsNotInGatsbyConfig]) {
-    if (
-      [
-        "dev-404-page",
-        "bundle-optimisations",
-        "gatsby-config",
-        "default-site-plugin",
-        "internal-data-bridge",
-        "load-babel-config",
-        "prod-404",
-        "webpack-theme-component-shadowing",
-      ].includes(pluginInfo.name)
-    ) {
+  const plugins = [...flattenedPlugins, ...pluginsNotInGatsbyConfig]
+
+  const excludedNames = [
+    "dev-404-page",
+    "bundle-optimisations",
+    "gatsby-config",
+    "default-site-plugin",
+    "internal-data-bridge",
+    "load-babel-config",
+    "prod-404",
+    "webpack-theme-component-shadowing",
+  ]
+
+  for (const pluginInfo of plugins) {
+    if (excludedNames.includes(pluginInfo.name)) {
       continue
     }
 
@@ -132,7 +134,10 @@ exports.onPreInit = async ({ store }) => {
     pascalNames.push(pascalName)
   }
 
-  typeString += `type Plugin = string | ${pascalNames
+  typeString += `type Plugin = ${plugins
+    .filter(({ name }) => !excludedNames.includes(name))
+    .map(({ name }) => `"${name}"`)
+    .join(` | `)} | ${pascalNames
     .map((name) => `${name}PluginObject`)
     .join(` | `)}
 
