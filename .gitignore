@@ -1,0 +1,5 @@
+index.d.ts
+node_modules
+public
+.cache
+.DS_Store
