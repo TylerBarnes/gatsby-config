@@ -10,17 +10,6 @@ module.exports = gatsbyConfig({
     `gatsby-config`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-source-wordpress-experimental",
-      options: {
-        url: "mysite.com",
-        html: {
-          createStaticFiles: false,
-          useGatsbyImage: true,
-          imageMaxWidth: 800,
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
