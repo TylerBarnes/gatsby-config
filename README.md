@@ -20,5 +20,5 @@ module.exports = gatsbyConfig({
 
 Now when you run `gatsby develop`, typescript types will be generated for any Gatsby plugins you have installed that implement the `pluginOptionsSchema` Node API (see https://www.gatsbyjs.com/docs/node-apis/#pluginOptionsSchema for more info).
 
-If you're using an IDE which automatically uses TypeScript types for intellisense (like VSCode), you'll be able to use autocompletion and the intellisense dropdown to discover plugins options and read their descriptions and expected value types.
+If you're using an IDE which automatically uses TypeScript types for intellisense (like VSCode), you'll be able to use autocompletion and the intellisense dropdown to discover plugin options and read their descriptions and the expected types of values.
 
