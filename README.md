@@ -1,7 +1,7 @@
 # gatsby-config
- A typescript generator for `gatsby-config.js` plugins. Adds intellisense for Gatsby plugins to your IDE to make API's discoverable.
+ This plugin adds intellisense and autocompletion to `gatsby-config.js` for plugins in the plugins array! It makes Gatsby plugin API's discoverable :)
  
- Watch this video for a demo https://youtu.be/sGLlEcleumg
+Watch this video for a demo https://youtu.be/sGLlEcleumg
 
 ## Setting it up
 
@@ -18,7 +18,7 @@ module.exports = gatsbyConfig({
 })
 ```
 
-Now when you run `gatsby develop`, typescript types will be generated for any Gatsby plugins you have installed that implement the `pluginOptionsSchema` Node API (see https://www.gatsbyjs.com/docs/node-apis/#pluginOptionsSchema for more info).
+Now when you run `gatsby develop`, typescript types will be generated for any Gatsby plugins you have installed that implement the `pluginOptionsSchema` Node API (see https://www.gatsbyjs.com/docs/node-apis/#pluginOptionsSchema for more info). Those types will be added to the `gatsbyConfig` helper seen in the example above and that will enable intellisense and autocompletion for those plugins.
 
 If you're using an IDE which automatically uses TypeScript types for intellisense (like VSCode), you'll be able to use autocompletion and the intellisense dropdown to discover plugin options and read their descriptions and the expected types of values.
 
