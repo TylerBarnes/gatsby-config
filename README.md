@@ -1,7 +1,11 @@
 # gatsby-config
  A typescript generator for `gatsby-config.js` plugins. Adds intellisense for Gatsby plugins to your IDE to make API's discoverable.
  
- Watch this video for a demo https://youtu.be/sGLlEcleumg
+Watch this video for a demo https://youtu.be/sGLlEcleumg
+
+![Gatsby Plugin resolve intellisense dropdown](https://github.com/TylerBarnes/gatsby-config/blob/assets/resolve-intellisense.png)
+
+![Gatsby Plugin options intellisense dropdown](https://github.com/TylerBarnes/gatsby-config/blob/assets/options-intellisense.png)
 
 ## Setting it up
 
